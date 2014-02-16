@@ -1,0 +1,28 @@
+/* KIM */
+.entry-kim {
+    width:126px;
+    float:right;
+    margin-right:-3px;
+    position: absolute;
+    left: 500px;
+    top: 0px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.kim_top {
+    height:10px;
+    background:url(../images/kim_bg_top.png) no-repeat;
+}
+
+.kim_mid {
+    background:url(../images/kim_bg_mid.png) repeat-y;
+    padding:0 10px;
+    line-height:120%;
+    font-size:12px;
+}
+
+.kim_bottom {
+    height:88px;
+    background:url(../images/kim_bg_bottom.png) no-repeat;
+}
