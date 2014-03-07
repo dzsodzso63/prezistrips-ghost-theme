@@ -1,6 +1,6 @@
 # Prezistrips theme
 
-Derived frm the Casper default theme for [Ghost](http://github.com/tryghost/ghost/).
+Derived frm the Casper default theme for [Ghost](http://github.com/tryghost/ghost/). We use this for [prezistrips.com](http://prezistrips.com)
 
 
 
