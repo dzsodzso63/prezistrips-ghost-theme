@@ -26,3 +26,31 @@
     height:88px;
     background:url(../images/kim_bg_bottom.png) no-repeat;
 }
+
+.img_container {
+    width: 400px;
+    text-align: center;
+    overflow: hidden;
+    height: 300px;
+    border: 1px #aaa solid;
+    position: relative;
+}
+
+.img_container > span {
+    display: block;
+    width: 1000px;
+    margin-left: -300px; /* -(width-container width)/2 */
+}
+
+.img_container > span.watermark {
+    top: 0px;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 300px;
+    background: url(http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button_gray_T.png) no-repeat 50% 50%;
+}
+
+.img_container > span > img {
+    display: inline-block;
+}

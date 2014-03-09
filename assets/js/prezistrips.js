@@ -7,7 +7,16 @@ PS.kimilsung_template = '<div class="entry-kim">\
 	    <div class="entry-bottom"></div>\
 	</div>';
 
-$("prezi").each(function(i,p){
+$(".post-excerpt prezi").each(function(i,p){
+    var prezi_element = $(p);
+    var prezi_thumbnail = prezi_element.attr("thumbnail");
+    var post_link = prezi_element.closest("article").find("h2 a");
+    if (post_link) {
+	prezi_element.after('<a href="' + post_link.attr("href") + '"><div class="img_container"><span><img src="' + prezi_thumbnail + '" class="thumbnail"/></span><span class="watermark"></span></div></a>');
+    }
+});
+
+$(".post-content prezi").each(function(i,p){
     var prezi_element = $(p);
     var prezi_id = prezi_element.attr("id");
     var kim_text = prezi_element.attr("kim");
@@ -36,9 +45,18 @@ $("prezi").each(function(i,p){
 	    kim_opened = true;
 	}
 	if (kim_on) {
-	    kim_on = parseInt(kim_on, 10);
+	    var targets = kim_on.split(",");
+	    var step = parseInt(targets[0],10);
+	    var action = targets.length>1 ? parseInt(targets[1],10) : 0;
+	    var curStep = 0;
 	    player.on(PreziPlayer.EVENT_CURRENT_STEP, function(e) {
-		if (!kim_opened && e.value == kim_on) {
+		curStep = e.value;
+		if (!kim_opened && curStep == step && action == 0) {
+		    show_kim();
+		}
+	    });
+	    player.on(PreziPlayer.EVENT_CURRENT_ANIMATION_STEP, function(e) {
+		if (!kim_opened && curStep == step && action == e.value) {
 		    show_kim();
 		}
 	    });

@@ -118,7 +118,7 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
@@ -369,7 +369,7 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     display: table;
     width: 100%;
-    height: 60%;
+    height: 160px;
     margin-bottom: 5rem;
     text-align: center;
     color: #fff;
@@ -533,7 +533,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
-    padding: 60px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -881,7 +881,6 @@ margin on the iframe, cause it breaks stuff. */
     .blog-description {
         font-size: 1.5rem;
     }
-
 
     h1, h2 {
         font-size: 3rem;
